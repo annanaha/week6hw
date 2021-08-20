@@ -1,0 +1,77 @@
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.nav-link{
+    color: $dark;
+    border-bottom: 1px solid transparent;
+    &:hover{
+      color: $dark;
+      border-bottom: 1px solid $secondary;
+    }
+  }
+  .btn-hover{
+    color: $black;
+    transition: .3s;
+    &:hover{
+      border-bottom: 1px solid $secondary;
+    }
+  }
+  .btn-active{
+    border-bottom: 1px solid $secondary;
+  }
+
+  .count{
+    input{
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        border: 0;
+      }
+    .count-num{
+        margin: 0 12px;
+    }
+    .minus-btn{
+        position: relative;
+    }
+    .conunt-icon{
+        position: absolute;
+    }
+}
+
+.ham-btn{
+  border: 2px solid $dark;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+
+.nav{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.confir-number{
+  color: #fff;
+  position: absolute;
+  right:4px;
+  top: 2px;
+  font-size: 12px;
+  width: 22px;
+  height: 18px;
+  background-color: $secondary;
+  border-radius: 9px;
+}
+
+.btn-outlined-white{
+  color: $white;
+  border: 1px solid #fff;
+  &:hover{
+    color:$secondary;
+    border: 1px solid $secondary;
+  }
+}

@@ -1,0 +1,21 @@
+@mixin pad {
+    @media(min-width:768px){
+        @content
+    }
+    
+}
+
+// @mixin mobile {
+//     @media(min-width:768px){
+//         @content
+//     }
+    
+// }
+
+@mixin text-hidden {
+    text-indent:110%;
+    overflow:hidden;
+    white-space:nowrap;
+  }
+
+ 

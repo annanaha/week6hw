@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    <%- title %>
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/style/bootstrap.css">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <div class="header border-bottom " style="z-index: 1090;">
+    <div class="navbox ">
+      <div class="container position-relative">
+        <!-- 漢堡選單 -->
+        <button class="ham-btn navbar-toggler d-md-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="material-icons text-dark">
+            menu
+          </span>
+        </button>
+
+        <a class="header-title text-center text-md-start text-lg-center" href="index.html">
+          <h3 class="text-primary py-9 ">EXHIBINECTION</h3>
+        </a>
+
+        <div class="nav d-flex align-items-center">
+          <ul class="nav-sign d-none  d-md-flex justify-content-end ">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Sign in</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign up</a>
+            </li>
+          </ul>
+          <ul>
+            <div class="nav-item">
+              <a class="confir-icon nav-link position-relative" href="cart-part1.html" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <span class="material-icons align-middle">
+                  confirmation_number
+                </span>
+                <span class="confir-number text-center">3</span>
+              </a>
+            </div>
+        </div>
+        <!-- 摺疊 -->
+
+      </div>
+      <!-- container -->
+      <div class="container d-md-none">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <ul class="nav-sign d-md-flex justify-content-md-end">
+            <li class="nav-item">
+              <a class="nav-link ps-0 active" href="#">Sign in</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ps-0" href="#">Sign up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- navbox-->
+
+  </div>
+  <!-- header -->
+  <!-- 購物車預覽 -->
+  <div class=" offcanvas offcanvas-end bg-black" tabindex="-1" id="offcanvasRight"
+    aria-labelledby="offcanvasRightLabel" data-bs-backdrop="false">
+    <div class="offcanvas-header">
+      <h5 class="text-white fs-3" id="offcanvasRightLabel">Cart List</h5>
+      <a href="#" class="text-white " data-bs-dismiss="offcanvas" aria-label="Close">
+        <span class="material-icons">
+          close
+        </span></a>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="overflow-y-scroll mb-8">
+        <li>
+          <div class="card rounded mb-3 text-nowrap p-1">
+            <a href="#" class="text-black ">
+              <span class="material-icons">
+                close
+              </span></a>
+            <div class="d-flex justify-content-between px-7 pb-7">
+              <div class="d-flex">
+                <!-- 商品圖↓ -->
+                <div class=" cartpreview-img me-6">
+                  <img class="img-object cartpreview-img"
+                    src="https://github.com/hexschool/webLayoutTraining1st/blob/master/exhibition-week6/alina-grubnyak-R84Oy89aNKs-unsplash.jpg?raw=true"
+                    alt="商品1">
+                </div>
+                <!-- 資訊欄↓↓ -->
+                <div class="d-flex d-flex flex-column justify-content-between ">
+                  <div class="">
+                    <h6 class="card-title fs-7 fw-bold mb-1">2020 台味設計展</h6>
+                    <p class="card-text mb-1">01 JUN — 31 OCT</p>
+                    <p class="card-text"><small class="text-dark me-1">全票</small></p>
+                  </div>
+                  <h5 class="fs-6 fw-bold ">NT$350</h5>
+                </div>
+              </div>
+              <!-- 數量 -->
+              <ul
+                class="count d-flex flex-column justify-content-center align-items-center flex-md-row ">
+                <li id="minus">
+                  <span class="conunt-icon material-icons">
+                    remove
+                  </span>
+                  <div class="minus-btn">
+                    <input type="button" value="">
+                  </div>
+                </li>
+                <li class="fw-bold px-4">01</li>
+
+                <li id="plus">
+                  <span class="conunt-icon material-icons">
+                    add
+                  </span>
+                  <div class="minus-btn">
+                    <input type="button" value="">
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="card rounded mb-3 text-nowrap p-1">
+            <a href="#" class="text-black ">
+              <span class="material-icons">
+                close
+              </span></a>
+            <div class="d-flex justify-content-between px-7 pb-7">
+              <!-- 商品圖↓ -->
+              <div class="d-flex">
+                <div class=" cartpreview-img me-6">
+                  <img class="img-object cartpreview-img"
+                    src="https://github.com/hexschool/webLayoutTraining1st/blob/master/exhibition-week6/michel-catalisano--a0D9LpcKV8-unsplash.jpg?raw=true"
+                    alt="商品2">
+                </div>
+                <!-- 資訊欄↓↓ -->
+                <div class="d-flex d-flex flex-column justify-content-between ">
+                  <div class="">
+                    <h6 class="card-title fs-7 fw-bold mb-1">No.22 線上設計展</h6>
+                    <p class="card-text mb-1">01 JUN — 31 OCT</p>
+                    <p class="card-text"><small class="text-dark me-1">全票</small></p>
+                  </div>
+                  <h5 class="fs-6 fw-bold ">NT$350</h5>
+                </div>
+              </div>
+              <!-- 數量 -->
+              <ul
+                class="count d-flex flex-column justify-content-center align-items-center flex-md-row align-items-md-center">
+                <li id="minus">
+                  <span class="conunt-icon material-icons">
+                    remove
+                  </span>
+                  <div class="minus-btn">
+                    <input type="button" value="">
+                  </div>
+                </li>
+                <li class="fw-bold px-4">01</li>
+
+                <li id="plus">
+                  <span class="conunt-icon material-icons">
+                    add
+                  </span>
+                  <div class="minus-btn">
+                    <input type="button" value="">
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+            <!-- row -->
+          </div>
+        </li>
+        <li>
+          <div class="card rounded mb-3 text-nowrap p-1">
+            <a href="#" class="text-black ">
+              <span class="material-icons">
+                close
+              </span></a>
+            <div class="d-flex justify-content-between px-7 pb-7">
+              <!-- 商品圖↓ -->
+              <div class="d-flex">
+                <div class=" cartpreview-img me-6">
+                  <img class="img-object cartpreview-img"
+                    src="https://github.com/hexschool/webLayoutTraining1st/blob/master/exhibition-week6/moralis-tsai-8xsktFRw28I-unsplash.jpg?raw=true"
+                    alt="商品3">
+                </div>
+                <!-- 資訊欄↓↓ -->
+                <div class="d-flex d-flex flex-column justify-content-between ">
+                  <div class="">
+                    <h6 class="card-title fs-7 fw-bold mb-1">高雄設計節</h6>
+                    <p class="card-text mb-1">01 JUN — 31 OCT</p>
+                    <p class="card-text"><small class="text-dark me-1">全票</small></p>
+                  </div>
+                  <h5 class="fs-6 fw-bold ">NT$350</h5>
+                </div>
+              </div>
+              <!-- 數量 -->
+              <ul
+                class="count d-flex flex-column justify-content-center align-items-center flex-md-row align-items-md-center">
+                <li id="minus">
+                  <span class="conunt-icon material-icons">
+                    remove
+                  </span>
+                  <div class="minus-btn">
+                    <input type="button" value="">
+                  </div>
+                </li>
+                <li class="fw-bold px-4">01</li>
+
+                <li id="plus">
+                  <span class="conunt-icon material-icons">
+                    add
+                  </span>
+                  <div class="minus-btn">
+                    <input type="button" value="">
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+            <!-- row -->
+          </div>
+        </li>
+
+      </ul>
+    </div>
+    <div class="d-flex justify-content-between p-8">
+      <ul class="">
+        <li class="d-flex justify-content-between align-items-center">
+          <h5 class="text-white fw-medium fs-6 me-8">小計</h5>
+          <p class="text-white fw-medium fs-6">NT1050</p>
+        </li>
+
+      </ul>
+      <a class="cart-next btn btn-light bg-white text-primary  " href="cart-part1.html">前往結帳</a>
+    </div>
+  </div>
+
+  <%- contents %>
+
+    <!-- swiper要放最上面 -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+
+</body>
+
+</html>
